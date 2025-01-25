@@ -6,7 +6,9 @@ This repository contains the coursework for the **Introduction to Robotics** cou
 
 ## Assignments Overview
 
-### 1. **Introduction to ROS**
+## **Assignment 1: Introduction to ROS**
+
+**Description**: 
    This assignment introduces ROS and sets up the environment to control a simulated Turtlebot3 Burger robot. Key objectives include:
    - Understanding the ROS master, launching nodes, and interacting with topics, services, and actions.
    - Using RViz to visualize the robot and the environment.
@@ -17,19 +19,21 @@ This repository contains the coursework for the **Introduction to Robotics** cou
      - Publishing velocity commands to the `/cmd_vel` topic.
    - Preventing the robot from getting stuck and optimizing exploration by managing linear and angular velocities.
 
-### 2. **Assignment 2: Inverse Kinematics**
+## **Assignment 2: Inverse Kinematics**
 
 **Description**: 
-- Program the inverse kinematic (IK) algorithm for a robot to move its joints so that the end-effector follows a desired path.
+Program the inverse kinematic (IK) algorithm for a robot to move its joints so that the end-effector follows a desired path.
 
-**Structure**: 
-1. **3 DOF SCARA Robot**:
-   - Develop an analytic solution for the inverse kinematics of a 3 DOF SCARA robot.
+### Part 1: 3 DOF SCARA Robot:
+Develop an analytic solution for the inverse kinematics of a 3 DOF SCARA robot.
 
-2. **7 DOF KUKA Robot**:
-   - Implement the inverse kinematics solution using iterative algorithms.
+### Part 2: 7 DOF KUKA Robot:
+Implement the inverse kinematics solution using iterative algorithms.
 
-### 3. **Planning: RRT* Dubin's Car**
+## **Assignment 3: Path Planning Dubin's Car**
+
+**Description**: 
+
 In this assignment, a robotic planning method, RRT*, is implemented to drive a Dubins car with the following dynamics:
 
 ```
@@ -40,24 +44,27 @@ theta[t+1] = theta[t] + tan(phi[t])
 
 The goal is to move the car from an initial position `(x0, y0)` to a target position `(xt, yt)` while avoiding collisions with obstacles and staying within bounds.
 
-### 4. **Mapping **
+## **Assignment 4: Mapping**
+
+**Description**: 
 This assignment involves updating a grid-based occupancy map using laser scan data and the robot's pose. It is split into two tasks:
 
-## Part 1:
+### Part 1:
 In this part, the `update_map(self, grid_map, pose, scan)` function is implemented to convert laser scan readings into map coordinates and mark occupied spaces in the grid. The goal is to accurately fill in the map with detected obstacles.
 
-## Part 2:
+### Part 2:
 Building on Part 1, this task involves addressing two issues:
 1. **Noise**: Using ray tracing to clear free space between the robot and obstacles.
 2. **Free Space**: Marking free spaces and expanding occupied cells to create a **C-space** map for path planning. 
 
 Only the affected portions of the map are updated to improve efficiency.
 
-### 5. **Mission Planner for TIAGo Robot**
+## **Assignment 5: Mission Planner for TIAGo Robot**
 
+**Description**: 
 The final project involves simulating a TIAGo robot in an apartment using Gazebo. The robot is equipped with sensors and a manipulator arm that allow it to autonomously navigate and perform simple manipulation tasks. The goal is to implement a mission planner for TIAGo to execute three different missions.
 
-## Project Format
+### Project Format
 In this project, multiple pre-existing modules (e.g., planning, sensing, navigation, manipulation) are integrated to create a mission planner node. This node will be responsible for high-level task planning, commanding the robot where to go and what actions to perform based on its current state and mission specifications.
 
 Your tasks will include:
