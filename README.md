@@ -67,7 +67,7 @@ The final project involves simulating a TIAGo robot in an apartment using Gazebo
 ### Project Format
 In this project, multiple pre-existing modules (e.g., planning, sensing, navigation, manipulation) are integrated to create a mission planner node. This node will be responsible for high-level task planning, commanding the robot where to go and what actions to perform based on its current state and mission specifications.
 
-Your tasks will include:
+The tasks include:
 - **Mission Planner Node**: Implement the `sm_students.py` file to create a state machine (SM) for executing the mission's sequence of steps. The sequence will depend on the robot's state and the available modules. An example SM is provided in the working package.
 - **Behavior Tree (BT)**: Implement a behavior tree equivalent of the state machine in the `bt_students.py` file.
 - **Launch File**: Create a `launch_project.launch` file to deploy and connect the necessary nodes and components to perform the tasks. The launch file requires to substitute placeholder names with meaningful parameters.
@@ -87,7 +87,7 @@ The robot must:
 ### Observations:
 1. **Kidnapping**: The robot must detect if it has been manually moved and react appropriately to regain its true position and avoid collisions. Test by manually "kidnapping" the robot during the implementation.
 2. **Cube Dropping**: During navigation, the cube may be manually removed from the robot's gripper. The robot must detect this failure and retry the placing task.
-3. **Localization**: The robot uses a particle filter for localization. You must use the state of the particle distribution to determine when the filter has converged.
+3. **Localization**: The robot uses a particle filter for localization. The state of the particle distribution must be used to determine when the filter has converged.
 4. **No True State Usage**: Do not use the true state of models (e.g., `/gazebo/model_states`) to check if the cube is grasped or if localization has failed.
 
 ---
